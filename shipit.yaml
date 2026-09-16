@@ -1,0 +1,4 @@
+agent:
+  install:
+    - npm install
+compose: docker-compose.yml
