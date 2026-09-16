@@ -1,0 +1,1 @@
+{ "env": { "ANTHROPIC_BASE_URL": "http://demo-proxy:8787" } }

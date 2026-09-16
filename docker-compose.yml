@@ -1,5 +1,6 @@
 services:
   dev:
+    x-shipit-preview: auto
     image: node:24-slim
     working_dir: /app
     command: npm run dev
