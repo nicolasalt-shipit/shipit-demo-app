@@ -1,0 +1,195 @@
+:root {
+  --bg: #0f1115;
+  --surface: #181b22;
+  --surface-hover: #1f232c;
+  --border: #2a2f3a;
+  --text: #e7e9ee;
+  --muted: #9099ab;
+  --accent: #4ade80;
+  --flame: #fb923c;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 1.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.habit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.habit {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.habit:hover {
+  background: var(--surface-hover);
+}
+
+.habit--done {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.check {
+  flex: none;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: #0f1115;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.check:hover {
+  border-color: var(--accent);
+}
+
+.check:active {
+  transform: scale(0.9);
+}
+
+.habit--done .check {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.habit-name {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.habit--done .habit-name {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.streak {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.streak--active {
+  color: var(--flame);
+  font-weight: 600;
+}
+
+.streak-unit {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.delete {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.habit:hover .delete,
+.delete:focus-visible {
+  opacity: 1;
+}
+
+.delete:hover {
+  color: #f87171;
+}
+
+.add {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.add input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.add input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.add button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: var(--accent);
+  color: #0f1115;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
