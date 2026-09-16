@@ -1,12 +1,14 @@
 :root {
-  --bg: #0f1115;
-  --surface: #181b22;
-  --surface-hover: #1f232c;
-  --border: #2a2f3a;
-  --text: #e7e9ee;
-  --muted: #9aa1b1;
-  --accent: #5b8cff;
-  --done: #3ecf8e;
+  /* Dark surfaces carry a slight violet tint so the accent reads as part of the theme. */
+  --bg: #100e18;
+  --surface: #191527;
+  --surface-hover: #221d33;
+  --border: #2e2743;
+  --text: #ece9f5;
+  --muted: #a49cbb;
+  --accent: #8b5cf6;
+  --accent-bright: #a78bfa;
+  --done: var(--accent);
   color-scheme: dark;
 }
 
@@ -71,6 +73,10 @@ body {
   cursor: pointer;
 }
 
+.add-button:hover:not(:disabled) {
+  background: var(--accent-bright);
+}
+
 .add-button:disabled {
   opacity: 0.4;
   cursor: default;
@@ -108,7 +114,7 @@ body {
   background: transparent;
   border: 2px solid var(--border);
   border-radius: 50%;
-  color: #0f1115;
+  color: #fff;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
