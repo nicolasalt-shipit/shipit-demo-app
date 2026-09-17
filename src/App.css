@@ -1,13 +1,17 @@
 :root {
-  --bg: #f6f7f9;
-  --card: #ffffff;
-  --ink: #16181d;
-  --muted: #71767f;
-  --line: #e7e9ee;
-  --accent: #2f7d5d;
-  --accent-soft: #e8f4ee;
-  --flame: #c4622a;
-  --flame-soft: #fbf0e7;
+  color-scheme: dark;
+  --bg: #0e0f13;
+  --card: #17191f;
+  --ink: #e9eaee;
+  --muted: #8b8f9c;
+  --line: #262832;
+  --ring: #3a3d4a;
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.16);
+  --flame: #f0a868;
+  --flame-soft: rgba(240, 168, 104, 0.14);
+  --chip: #212430;
 }
 
 * {
@@ -48,7 +52,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 1px 2px rgba(16, 18, 24, 0.04), 0 8px 24px rgba(16, 18, 24, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.35);
   height: fit-content;
 }
 
@@ -84,6 +88,7 @@ h1 {
   font-size: 1.125rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+  color: var(--accent);
 }
 
 .progress-label {
@@ -119,7 +124,7 @@ h1 {
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1.5px solid #cdd2db;
+  border: 1.5px solid var(--ring);
   border-radius: 999px;
   background: transparent;
   cursor: pointer;
@@ -144,7 +149,7 @@ h1 {
   width: 0.9rem;
   height: 0.9rem;
   fill: none;
-  stroke: #cdd2db;
+  stroke: var(--ring);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -152,8 +157,8 @@ h1 {
 }
 
 .habit.is-done .check {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .habit.is-done .check svg {
@@ -174,7 +179,7 @@ h1 {
 .habit.is-done .name {
   color: var(--muted);
   text-decoration: line-through;
-  text-decoration-color: #c9ced8;
+  text-decoration-color: var(--ring);
 }
 
 .streak {
@@ -184,7 +189,7 @@ h1 {
   gap: 0.3rem;
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
-  background: #f1f2f5;
+  background: var(--chip);
   color: var(--muted);
   font-size: 0.8125rem;
   font-weight: 600;
