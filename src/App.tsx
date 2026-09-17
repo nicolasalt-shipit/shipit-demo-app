@@ -44,7 +44,7 @@ export function App() {
       <main className="card">
         <header className="header">
           <div>
-            <h1>Habits</h1>
+            <h1>Streaks</h1>
             <p className="date">{today}</p>
           </div>
           <div className="progress" aria-label={`${doneCount} of ${habits.length} habits done`}>
