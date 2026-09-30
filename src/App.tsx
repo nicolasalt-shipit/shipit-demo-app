@@ -33,7 +33,7 @@ export function App() {
   return (
     <main className="app">
       <header className="header">
-        <h1>Daily Habits</h1>
+        <h1>Streaks</h1>
         <p className="progress">
           {doneCount} of {habits.length} done today
         </p>
