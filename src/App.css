@@ -1,0 +1,99 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f0f14;
+  color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #f5f3ff;
+}
+
+.progress {
+  margin: 0.25rem 0 1.5rem;
+  color: #9ca3af;
+}
+
+.habit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.habit {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  background: #1a1a23;
+  border: 1px solid #2a2a36;
+  border-radius: 12px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.habit.done {
+  background: #1e1a2e;
+  border-color: #4c3a8a;
+}
+
+.check {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #4b4b5c;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.check:hover {
+  border-color: #8b5cf6;
+}
+
+.check:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.habit.done .check {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.name {
+  flex: 1;
+}
+
+.habit.done .name {
+  color: #8b8b9a;
+  text-decoration: line-through;
+}
+
+.streak {
+  flex: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #c4b5fd;
+  background: #2a2140;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+}
