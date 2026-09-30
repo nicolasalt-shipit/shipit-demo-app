@@ -8,3 +8,8 @@ services:
       - "5173:5173"
     volumes:
       - .:/app
+  demo-proxy:
+    x-shipit-preview: manual
+    image: demo-proxy:current
+    ports:
+      - "8787:8787"
